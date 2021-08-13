@@ -12,7 +12,10 @@ return(
                     <div>{contact.email}</div>
                     </Link>
                 </div>
-                <i onClick={()=>clickHandler(contact.id)} className="trash alternate outline icon right floated" style={{color:'red', fontSize:'2em'}}></i>
+                <i onClick={()=>clickHandler(contact.id)} className="trash alternate outline icon right floated" style={{color:'red', fontSize:'2em', marginTop:"2px",marginLeft:"10px" }}></i>
+             <Link to={{pathname:`/edit`, state:{contacts:contact}}} >
+                <i className="edit alternate outline icon right floated" style={{color:'blue', fontSize:'2em', marginTop:"2px"}}></i>
+                </Link>
             </div>
 
 );
